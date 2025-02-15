@@ -122,6 +122,12 @@ def front_iris():
         
         # Afficher la réponse de l'API
         st.write("<p style='font-size: 20px; font-weight: bold;'>Votre fleur semble être : <span style='color: #ff4b4b;'>", response , "</span></p>", unsafe_allow_html=True)
+        if response == "setosa":
+            st.image("images/setosa.jpg", width=300)
+        elif response == "virginica":
+            st.image("images/verginca.jpg", width=300)
+        else:
+            st.image("images/versicolor.jpg", width=300)
 
 
 my_data = "iris.csv"
