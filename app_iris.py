@@ -7,6 +7,24 @@ import pandas as pd
 import os
 import seaborn as sns
 import matplotlib.pyplot as plt
+import smtplib
+import json
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+from email.message import EmailMessage
+
+# Fonction pour envoyer un email
+# def envoyer_email(nom, email, objet, message):
+#     destinataire = "vmangwandjo@gmail.com"
+#     mot_de_passe = "bhfhcyztuwdtcrkv"    # Remplacez par votre mot de passe
+
+#     msg = MIMEText(message)
+#     msg['Subject'] = object
+#     msg['From'] = email
+#     msg['To'] = destinataire
+#     with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp_server:
+#        smtp_server.login(email, mot_de_passe)
+#        smtp_server.sendmail(email, destinataire, msg.as_string())
 
 col1, col2 = st.columns([1, 3])  # Colonne 1 pour la navbar (1/4), Colonne 2 pour le contenu (3/4)
 
@@ -196,7 +214,9 @@ if selected == "Contact":
             if not nom or not email or not objet or not message:
                 st.error("Tous les champs sont obligatoires!")
             else:
-                st.write(f"Merci, {nom}, votre message a été envoyé !")
-                st.write(f"**Email :** {email}")
-                st.write(f"**Objet :** {objet}")
-                st.write(f"**Message :** {message}")
+                 st.error("Cette fonctionnailté n'est pas encore achévée...")
+                # try:
+                #     envoyer_email(nom, email, objet, message)
+                #     st.success(f"Merci, {nom}, votre message a été envoyé !")
+                # except Exception as e:
+                #     st.error(f"Une erreur est survenue lors de l'envoi de l'email : {e}")
